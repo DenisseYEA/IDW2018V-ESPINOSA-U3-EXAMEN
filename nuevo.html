@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nuevo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
+/>
+
+<script>
+    $(document).ready(function () {
+        var date_input = $('input[name="date"]'); //our date input has the name "date"
+        var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+            <div class="form-group col-xs-12 d-sm-none">
+                    <a class="btn" style="color: black" href="./login.html">
+                        <i class="fa fa-long-arrow-left btn-dark" style="font-size:48px;"></i>
+                    </a>
+                </div>
+        <a class="navbar-brand" href="#">Nuevo</a>
+    </nav>
+    <form>
+        <div class="container">
+            <br>
+            <div class="form-row">
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <input class="form-control" type="text" placeholder="RFC">
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <input class="form-control" type="text" placeholder="CURP">
+                </div>
+                <div class="form-group col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <input class="form-control" type="text" placeholder="Nombre">
+                </div>
+                <div class="form-group col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <input class="form-control" type="text" placeholder="Apellido Paterno">
+                </div>
+                <div class="form-group col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <input class="form-control" type="text" placeholder="Apellido Materno">
+                </div>
+                <div class="form-group col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <input class="form-control" name="date" placeholder="Fecha nacimiento" type="text" />
+                </div>
+                <div class="form-group col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <select class="form-control ">
+                        <option selected>Titulo</option>
+                    </select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <label class="form-check-label" for="gridRadios1">M</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">F</label>
+                    </div>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <input class="form-control" type="text" placeholder="Email">
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                        <label class="form-check-label" for="autoSizingCheck">
+                            Activo
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group d-none d-sm-block col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <a type="button" class="btn btn-dark container" href="./principal.html">Cancelar</a>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <button type="button" class="btn btn-dark container">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>
